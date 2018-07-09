@@ -1,3 +1,6 @@
+#add \n if .
+#add text files
+
 def madLibs():
     madFile = open('givenMadLibs.txt', 'r')
     madUser = open('userMadLibs.txt', 'w')
@@ -15,6 +18,9 @@ def madLibs():
                     madUser.write(userInput)
                     madUser.write(' ')
                     printToScreen += userInput + ' '
+                elif word == '.':
+                    madUser.write(word + '\n')
+                    printToScreen += word + ' '
                 else:
                     madUser.write(word)
                     madUser.write(' ')
